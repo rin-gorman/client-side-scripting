@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fortune Teller</title>
+    <style>
+        body {
+            background-color:rebeccapurple;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 40px;
+            color:aliceblue
+        };
+
+        .container {
+            height: 80vh;
+            width: 80vw;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.25rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        #emoji {
+            font-size: 4rem;
+            margin: 0 0 20px 0;
+        }
+
+        #fortune-teller {
+            width: 60%;
+            background-color: aliceblue;
+            border-radius: 25px;
+            font-weight: bold;
+            padding: 10px 0;
+        };
+    </style>
+
+  </head>
+  <body>
+    <main>
+        <container>
+        <h1>Fortune Teller</h1>  
+        <h1 id="emoji">🔮</h1>
+        <center><button id="fortune-teller">Get my fortune!</button></center>
+        </container>
+    </main>
+
+    <script>
+        let fortune1 = "Your cat will look very cuddly today.";
+        let fortune2 = "The weather will be nice tomorrow."
+        let fortune3 = "Be cautious of your new neighbors.";
+        let fortune4 = "You will find a new hobby soon.";
+        let fortune5 = "It would be wise to avoid the color red today.";
+        var randomNumber = Math.floor(Math.random() * 5) + 1;
+        let selectedFortune;
+        
+
+        const fortuneButton = document.getElementById("fortune-teller");
+
+        fortuneButton.onclick = function() {
+                if (randomNumber == 1) {
+                     selectedFortune = fortune1;
+                 } else if (randomNumber == 2) {
+                     selectedFortune = fortune2;
+                } else if (randomNumber == 3) {
+                     selectedFortune = fortune3;
+                 } else if (randomNumber == 4) {
+                        selectedFortune = fortune4;
+                } else if (randomNumber == 5) {
+                     selectedFortune = fortune5;
+                };
+
+            alert(selectedFortune);
+            console.log(randomNumber);
+            randomNumber = Math.floor(Math.random() * 5) + 1;
+        }
+
+    </script>
+  </body>
+</html>
